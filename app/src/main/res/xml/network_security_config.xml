@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Since Android 9 (API 28), plain HTTP (cleartext) traffic is blocked by default.
+    The Hipolabs API only works over HTTP, so cleartext is allowed ONLY for its domain.
+    Every other domain keeps the secure default (HTTPS only).
+-->
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="false">universities.hipolabs.com</domain>
+    </domain-config>
+</network-security-config>

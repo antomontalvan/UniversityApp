@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Full-screen pastel gradient used as the detail screen background. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <gradient
+        android:angle="270"
+        android:centerColor="@color/hero_mid"
+        android:endColor="@color/background"
+        android:startColor="@color/hero_start"
+        android:type="linear" />
+</shape>

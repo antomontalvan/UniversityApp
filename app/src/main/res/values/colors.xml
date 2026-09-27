@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Light theme palette: royal blue as the main brand color plus pastel accents. -->
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Brand -->
+    <color name="primary">#1463F3</color>
+    <color name="primary_light">#E6EEFF</color>
+
+    <!-- Surfaces and text -->
+    <color name="background">#F6F8FF</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="stroke">#E4E9F5</color>
+    <color name="text_primary">#0B1220</color>
+    <color name="text_secondary">#5B6478</color>
+
+    <!-- Hero gradient (blue -> lavender -> pink) -->
+    <color name="hero_start">#E3EDFF</color>
+    <color name="hero_mid">#F1E9FF</color>
+    <color name="hero_end">#FFE9F4</color>
+
+    <!-- Accent colors for icon badges -->
+    <color name="accent">#B45309</color>
+    <color name="accent_light">#FFF3D6</color>
+    <color name="purple">#7C3AED</color>
+    <color name="purple_light">#F0E9FF</color>
+    <color name="green">#0E9F6E</color>
+    <color name="green_light">#DFF6EC</color>
+</resources>

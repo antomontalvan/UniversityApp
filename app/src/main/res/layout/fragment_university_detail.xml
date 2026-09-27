@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Detail Fragment: header (icon, name, country) + one card per data group,
+    styled like feature cards (colored icon badge, caption and value).
+    Scrollable so it also works on small screens and in landscape.
+-->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    tools:context=".ui.detail.UniversityDetailFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="24dp">
+
+        <!-- Header -->
+        <ImageView
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_icon_square"
+            android:backgroundTint="@color/surface"
+            android:elevation="4dp"
+            android:importantForAccessibility="no"
+            android:padding="22dp"
+            android:src="@drawable/ic_university"
+            app:tint="@color/primary" />
+
+        <TextView
+            android:id="@+id/tvDetailName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:textColor="@color/text_primary"
+            android:textSize="24sp"
+            tools:text="Universidad de Buenos Aires" />
+
+        <!-- Country shown as a blue pill -->
+        <TextView
+            android:id="@+id/tvDetailCountry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_pill"
+            android:backgroundTint="@color/primary_light"
+            android:drawablePadding="6dp"
+            android:gravity="center_vertical"
+            android:paddingStart="12dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="14dp"
+            android:paddingBottom="5dp"
+            android:textColor="@color/primary"
+            android:textSize="14sp"
+            app:drawableStartCompat="@drawable/ic_globe_small"
+            app:drawableTint="@color/primary"
+            tools:text="Argentina" />
+
+        <!-- Two small cards side by side: province and country code -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/InfoCard"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="6dp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        style="@style/IconBadge"
+                        android:backgroundTint="@color/purple_light"
+                        android:src="@drawable/ic_location"
+                        app:tint="@color/purple" />
+
+                    <TextView
+                        style="@style/DetailLabel"
+                        android:text="@string/detail_label_province" />
+
+                    <TextView
+                        android:id="@+id/tvDetailProvince"
+                        style="@style/DetailValue"
+                        tools:text="Ciudad Autónoma de Buenos Aires" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/InfoCard"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="6dp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        style="@style/IconBadge"
+                        android:backgroundTint="@color/accent_light"
+                        android:src="@drawable/ic_flag"
+                        app:tint="@color/accent" />
+
+                    <TextView
+                        style="@style/DetailLabel"
+                        android:text="@string/detail_label_country_code" />
+
+                    <TextView
+                        android:id="@+id/tvDetailCountryCode"
+                        style="@style/DetailValue"
+                        tools:text="AR" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+        <!-- Official web domains -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/InfoCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <ImageView
+                    style="@style/IconBadge"
+                    android:backgroundTint="@color/green_light"
+                    android:src="@drawable/ic_globe"
+                    app:tint="@color/green" />
+
+                <TextView
+                    style="@style/DetailLabel"
+                    android:text="@string/detail_label_domains" />
+
+                <TextView
+                    android:id="@+id/tvDetailDomains"
+                    style="@style/DetailValue"
+                    android:lineSpacingExtra="4dp"
+                    tools:text="uba.ar" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Website with its active link -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/InfoCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <ImageView
+                    style="@style/IconBadge"
+                    android:backgroundTint="@color/primary_light"
+                    android:src="@drawable/ic_link"
+                    app:tint="@color/primary" />
+
+                <TextView
+                    style="@style/DetailLabel"
+                    android:text="@string/detail_label_website" />
+
+                <TextView
+                    android:id="@+id/tvDetailWebsite"
+                    style="@style/DetailValue"
+                    android:textColor="@color/primary"
+                    tools:text="http://www.uba.ar/" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnOpenWebsite"
+            style="@style/PillButton"
+            android:layout_width="match_parent"
+            android:layout_marginTop="24dp"
+            android:text="@string/action_open_website"
+            app:icon="@drawable/ic_open_in_new"
+            app:iconGravity="textStart"
+            app:iconTint="@color/white" />
+
+        <!-- Fallback: many API websites are outdated, so a web search is always offered -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSearchWeb"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-medium"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="@string/action_search_web"
+            android:textAllCaps="false"
+            android:textColor="@color/primary"
+            android:textSize="16sp"
+            app:cornerRadius="50dp"
+            app:icon="@drawable/ic_search"
+            app:iconGravity="textStart"
+            app:iconTint="@color/primary"
+            app:strokeColor="@color/primary" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:text="@string/detail_website_hint"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+</ScrollView>

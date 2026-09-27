@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Dark theme palette. Android picks this file automatically when the device
+    is in dark mode, so the same layouts stay readable without code changes.
+-->
+<resources>
+    <color name="primary">#4D8DFF</color>
+    <color name="primary_light">#1B2A4A</color>
+
+    <color name="background">#0E1320</color>
+    <color name="surface">#182033</color>
+    <color name="stroke">#26314A</color>
+    <color name="text_primary">#F1F4FA</color>
+    <color name="text_secondary">#A3ACBF</color>
+
+    <color name="hero_start">#16213D</color>
+    <color name="hero_mid">#231A3D</color>
+    <color name="hero_end">#2D1A30</color>
+
+    <color name="accent">#FBBF24</color>
+    <color name="accent_light">#3A2E12</color>
+    <color name="purple">#A78BFA</color>
+    <color name="purple_light">#2A2145</color>
+    <color name="green">#34D399</color>
+    <color name="green_light">#123326</color>
+</resources>

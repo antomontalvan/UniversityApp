@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    All user-facing texts live here instead of being hardcoded in XML or Kotlin.
+    This keeps layouts clean and would allow translating the app easily.
+-->
+<resources>
+    <string name="app_name">UniversityApp</string>
+    <string name="brand_name">UniFinder</string>
+
+    <!-- Main screen -->
+    <string name="hero_title_line1">Tu próxima</string>
+    <string name="hero_title_line2">universidad te espera</string>
+    <string name="hero_subtitle">Explorá universidades de todo el mundo buscando por país, en tiempo real.</string>
+    <string name="search_hint">Buscá un país (ej: Argentina)</string>
+    <string name="message_idle">Escribí al menos 3 letras del nombre del país en inglés, o probá con uno de estos:</string>
+    <string name="message_empty">No encontramos universidades para \"%1$s\".\nProbá con el nombre del país en inglés:</string>
+    <string name="action_retry">Reintentar</string>
+
+    <!-- Suggestion chips: the text is used directly as the search query -->
+    <string name="suggestion_argentina">Argentina</string>
+    <string name="suggestion_spain">Spain</string>
+    <string name="suggestion_united_states">United States</string>
+    <string name="suggestion_japan">Japan</string>
+
+    <plurals name="results_count">
+        <item quantity="one">%d universidad encontrada</item>
+        <item quantity="many">%d universidades encontradas</item>
+        <item quantity="other">%d universidades encontradas</item>
+    </plurals>
+
+    <!-- Errors -->
+    <string name="error_no_connection">Sin conexión a internet.\nRevisá tu conexión e intentá de nuevo.</string>
+    <string name="error_server">El servidor respondió con un error (código %1$d).\nIntentá de nuevo en unos minutos.</string>
+    <string name="error_unknown">Ocurrió un error inesperado.\nIntentá de nuevo.</string>
+    <string name="error_no_browser">No hay un navegador disponible para abrir el enlace</string>
+
+    <!-- Detail screen -->
+    <string name="detail_title">Detalle</string>
+    <string name="action_back">Volver</string>
+    <string name="detail_label_country_code">Código de país</string>
+    <string name="detail_label_province">Estado / Provincia</string>
+    <string name="detail_label_domains">Dominios web oficiales</string>
+    <string name="detail_label_website">Sitio web</string>
+    <string name="detail_not_available">No especificado</string>
+    <string name="action_open_website">Visitar sitio web</string>
+    <string name="action_search_web">Buscar en Google</string>
+    <string name="detail_website_hint">Algunos sitios provistos por la API pueden estar desactualizados. Si no carga, probá buscarla en Google.</string>
+</resources>
