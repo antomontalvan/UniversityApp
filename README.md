@@ -3,7 +3,7 @@
 Aplicación Android en Kotlin que busca universidades por país en tiempo real usando la
 [Hipolabs Universities API](http://universities.hipolabs.com/search?country=Argentina).
 
-**Video demostrativo:** [VER VIDEO](PEGAR_ACA_EL_LINK_DE_LOOM_YOUTUBE_O_DRIVE)
+**Video demostrativo:** [VER VIDEO](https://drive.google.com/drive/folders/1CQTwpTOa0MVyfVxeP1FuhlnHHlK3Ij8V?usp=sharing)
 
 ## Funcionalidades
 
